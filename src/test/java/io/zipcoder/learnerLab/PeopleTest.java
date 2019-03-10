@@ -1,5 +1,7 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.learnerLab;
 
+import io.zipcoder.learnerLab.containers.People;
+import io.zipcoder.learnerLab.models.Person;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,9 +1,11 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.learnerLab;
 
+import io.zipcoder.learnerLab.interfaces.Teacher;
+import io.zipcoder.learnerLab.models.Instructor;
+import io.zipcoder.learnerLab.models.Person;
+import io.zipcoder.learnerLab.models.Student;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class InstructorTest {
 

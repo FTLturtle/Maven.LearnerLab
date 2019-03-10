@@ -1,4 +1,6 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.learnerLab.models;
+
+import io.zipcoder.learnerLab.interfaces.Learner;
 
 public class Student extends Person implements Learner {
     private double totalStudyTime;

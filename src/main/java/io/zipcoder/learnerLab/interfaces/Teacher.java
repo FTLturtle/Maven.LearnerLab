@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.learnerLab.interfaces;
 
 public interface Teacher {
     void teach(Learner learner, double numberOfHours);

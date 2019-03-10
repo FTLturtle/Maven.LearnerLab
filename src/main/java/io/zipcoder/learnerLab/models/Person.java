@@ -1,4 +1,4 @@
-package io.zipcoder.interfaces;
+package io.zipcoder.learnerLab.models;
 
 public class Person {
     private final long id;
