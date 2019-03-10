@@ -13,31 +13,35 @@ public class People {
         this.personList = personList;
     }
 
-    public void add() {
-
+    public void add(Person person) {
+        personList.add(person);
     }
 
     public Person findById(long id) {
-        return null;
+        return personList.stream()
+                .parallel()
+                .filter(person -> id == person.getId())
+                .findAny()
+                .orElse(null);
     }
 
     public int getCount() {
-        return 0;
+        return personList.size();
     }
 
     public Person[] getArray() {
-        return null;
+        return personList.toArray(new Person[0]);
     }
 
     public void remove(Person person) {
-
+        personList.remove(person);
     }
 
     public void remove(long id) {
-
+        remove(findById(id));
     }
 
     public void removeAll() {
-
+        personList.clear();
     }
 }
