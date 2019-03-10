@@ -1,4 +1,4 @@
-package io.zipcoder.learnerLab;
+package io.zipcoder.learnerLab.models;
 
 import io.zipcoder.learnerLab.interfaces.Teacher;
 import io.zipcoder.learnerLab.models.Instructor;

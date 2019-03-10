@@ -1,4 +1,4 @@
-package io.zipcoder.learnerLab;
+package io.zipcoder.learnerLab.containers;
 
 import io.zipcoder.learnerLab.containers.People;
 import io.zipcoder.learnerLab.models.Person;
