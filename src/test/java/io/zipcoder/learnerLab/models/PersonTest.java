@@ -1,6 +1,5 @@
 package io.zipcoder.learnerLab.models;
 
-import io.zipcoder.learnerLab.models.Person;
 import org.junit.Assert;
 import org.junit.Test;
 

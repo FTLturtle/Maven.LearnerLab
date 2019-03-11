@@ -5,7 +5,7 @@ import io.zipcoder.learnerLab.models.Person;
 import java.util.ArrayList;
 
 public class People {
-    private ArrayList<Person> personList;
+    protected ArrayList<Person> personList;
 
     public People() {
         this(new ArrayList<>());

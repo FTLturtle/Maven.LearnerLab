@@ -1,8 +1,6 @@
 package io.zipcoder.learnerLab.models;
 
 import io.zipcoder.learnerLab.interfaces.Learner;
-import io.zipcoder.learnerLab.models.Person;
-import io.zipcoder.learnerLab.models.Student;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -44,6 +42,34 @@ public class StudentTest {
         // Given
         Student student = new Student(0);
         double expectedTotalStudyTime = 30.5;
+
+        // When
+        student.learn(expectedTotalStudyTime);
+        double actualTotalStudyTime = student.getTotalStudyTime();
+
+        // Then
+        Assert.assertEquals(expectedTotalStudyTime, actualTotalStudyTime, .000001);
+    }
+
+    @Test
+    public void learnTest3() {
+        // Given
+        Student student = new Student(-1, "Bob");
+        double expectedTotalStudyTime = 400.0;
+
+        // When
+        student.learn(expectedTotalStudyTime);
+        double actualTotalStudyTime = student.getTotalStudyTime();
+
+        // Then
+        Assert.assertEquals(expectedTotalStudyTime, actualTotalStudyTime, .000001);
+    }
+
+    @Test
+    public void learnTest4() {
+        // Given
+        Student student = new Student(90, "Bob");
+        double expectedTotalStudyTime = 5786.98;
 
         // When
         student.learn(expectedTotalStudyTime);

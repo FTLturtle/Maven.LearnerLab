@@ -1,6 +1,5 @@
 package io.zipcoder.learnerLab.containers;
 
-import io.zipcoder.learnerLab.containers.People;
 import io.zipcoder.learnerLab.models.Person;
 import org.junit.Assert;
 import org.junit.Test;
@@ -57,6 +56,8 @@ public class PeopleTest {
         // Then
         Assert.assertEquals(expectedPerson, actualPerson);
     }
+
+
 
     @Test
     public void getCountTest1() {
@@ -149,4 +150,6 @@ public class PeopleTest {
         // Then
         Assert.assertEquals(expectedCount, actualCount);
     }
+
+
 }
