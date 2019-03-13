@@ -1,5 +1,6 @@
 package io.zipcoder.learnerLab;
 
+import io.zipcoder.learnerLab.enums.Educator;
 import io.zipcoder.learnerLab.models.Instructor;
 import io.zipcoder.learnerLab.models.Student;
 import org.junit.Assert;
@@ -17,7 +18,7 @@ public class ZipCodeWilmingtonTest {
     }
 
     @Test
-    public void hostLectureTeacherTest() {
+    public void hostLectureTeacherTest1() {
         // Given
         double lectureLength = 40.0;
         ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
@@ -28,6 +29,22 @@ public class ZipCodeWilmingtonTest {
         zipCodeWilmington.hostLecture(new Instructor(0), lectureLength);
         studentArray = zipCodeWilmington.getStudentsArray();
         double actualHours = studentArray[0].getTotalStudyTime();
+
+        // Then
+        Assert.assertEquals(expectedHours, actualHours, .000001);
+    }
+
+    @Test
+    public void hostLectureTeacherTest2() {
+        // Given
+        double lectureLength = 40.0;
+        ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
+        Educator dolio = Educator.DOLIO;
+        double expectedHours = dolio.getTotalTeachingTime() + lectureLength;
+
+        // When
+        zipCodeWilmington.hostLecture(dolio, lectureLength);
+        double actualHours = dolio.getTotalTeachingTime();
 
         // Then
         Assert.assertEquals(expectedHours, actualHours, .000001);
