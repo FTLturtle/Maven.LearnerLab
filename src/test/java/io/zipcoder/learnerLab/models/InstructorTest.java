@@ -100,4 +100,19 @@ public class InstructorTest {
         // Then
         Assert.assertEquals(expectedTotalStudyTime, actualTotalStudyTime, .000001);
     }
+
+    @Test
+    public void lectureTest4() {
+        // Given
+        Instructor instructor = new Instructor(0);
+        Student[] students = {new Student(1), new Student(2), new Student(3)};
+        double teachTime = 25.0;
+
+        // When
+        instructor.lecture(students, teachTime);
+        double actualTeachTime = instructor.getTotalTeachingTime();
+
+        // Then
+        Assert.assertEquals(teachTime, actualTeachTime, .000001);
+    }
 }

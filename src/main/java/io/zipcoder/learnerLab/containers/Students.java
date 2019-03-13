@@ -1,22 +1,20 @@
 package io.zipcoder.learnerLab.containers;
 
-import io.zipcoder.learnerLab.models.Person;
 import io.zipcoder.learnerLab.models.Student;
 import io.zipcoder.learnerLab.utilities.FileScannerGenerator;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public final class Students extends People {
+public final class Students extends People<Student> {
     private static final Students INSTANCE = new Students();
 
     private Students() {
         personList = getPopulatedPersonList();
     }
 
-    private ArrayList<Person> getPopulatedPersonList() {
+    private ArrayList<Student> getPopulatedPersonList() {
         ArrayList<Student> students = new ArrayList<>();
         File file = new File("resource/studentNames.txt");
         Scanner sc = FileScannerGenerator.getScannerOfFile(file);
@@ -25,7 +23,7 @@ public final class Students extends People {
             students.add(new Student(idCount, sc.nextLine()));
             idCount++;
         }
-        return new ArrayList<>(students);
+        return students;
     }
 
     public static Students getInstance() {

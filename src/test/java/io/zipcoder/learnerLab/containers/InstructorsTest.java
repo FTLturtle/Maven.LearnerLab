@@ -3,18 +3,18 @@ package io.zipcoder.learnerLab.containers;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class StudentsTest {
+public class InstructorsTest {
 
     @Test
     public void getInstance() {
         // Given
-        int expectedCount = 40;
+        int expectedCount = 6;
 
         // When
-        Students students = Students.getInstance();
-        int actualCount = students.getCount();
+        Instructors instructors = Instructors.getInstance();
+        int actualCount = instructors.getCount();
 
         // Then
         Assert.assertEquals(expectedCount, actualCount);
-        }
+    }
 }
